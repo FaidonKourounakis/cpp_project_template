@@ -2,12 +2,12 @@
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "cpp: build .exe from list of .o",
+      "label": "cpp: build .exe from .o",
       "command": "C:\\dev\\mingw\\bin\\g++.exe",
       "args": [
+        "--std=c++17",
         "-g",
-        "${workspaceFolder}\\objects\\main.o",
-        "${workspaceFolder}\\objects\\hello.o",
+        "${workspaceFolder}\\src\\player.o",
         "-o",
         "${workspaceFolder}\\bin\\program.exe"
       ],
@@ -20,14 +20,15 @@
     },
     {
       "type": "cppbuild",
-      "label": "cpp: build .o from current .cpp file",
+      "label": "C/C++: build .o from current file",
       "command": "C:\\dev\\mingw\\bin\\g++.exe",
       "args": [
+        "--std=c++17",
         "-g",
         "-c",
         "${file}",
         "-o",
-        "${workspaceFolder}\\objects\\${fileBasenameNoExtension}.o"
+        "${workspaceFolder}\\obj\\${fileBasenameNoExtension}.o"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -38,9 +39,10 @@
     },
     {
       "type": "cppbuild",
-      "label": "cpp: build .exe from current .cpp file",
+      "label": "C/C++: build .exe from current file",
       "command": "C:\\dev\\mingw\\bin\\g++.exe",
       "args": [
+        "--std=c++17",
         "-g",
         "${file}",
         "-o",
