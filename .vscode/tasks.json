@@ -2,14 +2,14 @@
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "cpp: build .exe from .o",
-      "command": "C:\\dev\\mingw\\bin\\g++.exe",
+      "label": "cpp: build executable from .o files",
+      "command": "/usr/bin/g++",
       "args": [
-        "--std=c++17",
         "-g",
-        "${workspaceFolder}\\src\\player.o",
+        "${workspaceFolder}/bin/hello.o",
+        "${workspaceFolder}/bin/main.o",
         "-o",
-        "${workspaceFolder}\\bin\\program.exe"
+        "${workspaceFolder}/bin/program.out"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -21,14 +21,13 @@
     {
       "type": "cppbuild",
       "label": "C/C++: build .o from current file",
-      "command": "C:\\dev\\mingw\\bin\\g++.exe",
+      "command": "/usr/bin/g++",
       "args": [
-        "--std=c++17",
         "-g",
         "-c",
         "${file}",
         "-o",
-        "${workspaceFolder}\\obj\\${fileBasenameNoExtension}.o"
+        "${workspaceFolder}/bin/${fileBasenameNoExtension}.o"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
@@ -39,14 +38,13 @@
     },
     {
       "type": "cppbuild",
-      "label": "C/C++: build .exe from current file",
-      "command": "C:\\dev\\mingw\\bin\\g++.exe",
+      "label": "C/C++: build executable from current file",
+      "command": "/usr/bin/g++",
       "args": [
-        "--std=c++17",
         "-g",
         "${file}",
         "-o",
-        "${workspaceFolder}\\bin\\program.exe"
+        "${workspaceFolder}/bin/program.out"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
