@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "g++.exe - Build and debug from .o",
+      "name": "gdb debug program.out",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/bin/program.out",
@@ -13,16 +13,17 @@
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
+      "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "/usr/bin/gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ]
-      //"preLaunchTask": "cpp: build .exe from .o"
+      ],
+      // "preLaunchTask": "g++ build executable from .o files",
+      "miDebuggerPath": "/usr/bin/gdb"
     }
   ]
 }

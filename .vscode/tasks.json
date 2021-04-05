@@ -1,8 +1,9 @@
 {
+  "version": "2.0.0",
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "cpp: build executable from .o files",
+      "label": "g++ build executable from .o files",
       "command": "/usr/bin/g++",
       "args": [
         "-g",
@@ -20,7 +21,7 @@
     },
     {
       "type": "cppbuild",
-      "label": "C/C++: build .o from current file",
+      "label": "g++ build .o from current file",
       "command": "/usr/bin/g++",
       "args": [
         "-g",
@@ -38,7 +39,7 @@
     },
     {
       "type": "cppbuild",
-      "label": "C/C++: build executable from current file",
+      "label": "g++ build executable from current file",
       "command": "/usr/bin/g++",
       "args": [
         "-g",
